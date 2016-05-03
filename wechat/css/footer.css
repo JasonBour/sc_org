@@ -1,0 +1,23 @@
+.test_ul{
+float: left;
+
+}
+.test_ul li{
+float: left ;
+list-style: none;
+
+
+}
+div.footer{
+	
+	bottom: 0px;
+	border: 0px  solid #CCC; 
+
+	height: 50px;
+}
+
+div.divider{
+	 height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}

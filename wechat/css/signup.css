@@ -1,0 +1,37 @@
+<!--signup-->
+
+body{
+
+padding-top: 40px
+
+}
+.container{
+	margin-top: 50px;
+max-width: 330px;
+
+}
+.form-signup {
+padding: 15px ;
+max-width: 330px;
+background-color: #eee;
+}
+
+
+
+.form-signup input[type="password"]{
+	margin-bottom:10px ;
+}
+
+.form-signup .form-control{
+position: relative;
+height: auto;
+padding: 10px;
+font-size: 16px;
+
+}
+
+div.sign{
+padding-top: 30px;
+
+}
+

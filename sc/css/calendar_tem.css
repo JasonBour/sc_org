@@ -1,0 +1,180 @@
+/*
+日历的模板样式
+*/
+.div{
+	  /*
+       	background-image: url("../image/content.png");
+        **/
+    
+	height: 70%;
+      width:auto;
+      position:relative;
+       }
+		.center_1{
+			background-color: #C8C8C8;
+			width: 75%;
+			height: 55%;   /*标准*/
+			top: 16%;    /*标准*/
+			left: 10%;    /*标准*/
+			position: absolute;
+		     
+			background-image: url('../image/upload.png');
+		 
+			
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			background-position: center;
+		}
+		
+		
+
+		.div_wrapper{
+      margin-top: 25%;
+        position: absolute;
+        width: 80%;
+        height: 50%;
+
+		 margin-left: 10%;	
+       		
+		
+		}
+		.left_2{
+			overflow: hidden;
+			width: 45%;
+			height: 55%;
+			top: 16%;
+			left: 10%;
+			background-color: #C8C8C8;
+			position: absolute;
+			
+			background-image: url('../image/upload.png');
+			
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			
+			background-position: 50% 50%;
+		}
+		.right-top_2{
+			overflow: hidden;
+			top:16%;
+			width: 30%;
+			height: 27%;
+			left: 56%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+		
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.right_2{
+			overflow: hidden;
+			width: 30%;
+			height: 27%;
+			left: 56%;
+			top: 44%;
+			background-color: #C8C8C8;
+			position: absolute;
+	
+			background-image: url('../image/upload.png');
+		
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.left_3{
+			overflow: hidden;
+			width: 37%;
+			height: 55%;
+			left: 10%;
+			top: 16%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+		
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			
+			background-position: center;
+		}
+		.right_3{
+			overflow: hidden;
+			width: 37%;
+			height: 55%;
+			left: 48%;
+			top: 16%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+			
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.left_4{
+			overflow: hidden;
+			width: 24%;
+			height: 55%;
+			left: 10%;
+			top: 16%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+		
+			
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			background-position: 50% 50%;
+		}
+		.mid_4{
+			overflow: hidden;
+			width: 24%;
+			top: 16%;
+			height: 55%;
+			left: 35.5%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+		
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.right_4{
+			overflow: hidden;
+			width: 24%;
+			height: 55%;
+			top: 16%;
+			left: 61%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+		
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.left_5{
+			overflow: hidden;
+			width: 60%;
+			height: 55%;
+			top: 16%;
+			left:10%;
+			background-color: #C8C8C8;
+			position: absolute;
+		
+			background-image: url('../image/upload.png');
+	
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			
+			background-position: 50% 50%;
+		}
+	

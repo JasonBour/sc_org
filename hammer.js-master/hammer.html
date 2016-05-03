@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+	
+
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="hammer.min.js" type="text/javascript"></script>
+</head>
+<body id="body">
+    
+                <p  style=" margin-left:35%">
+                     <img id="Img1"  style="clear:both;position:absolute;" src="../me_lr.jpg" width="300px" height="400px" />
+                </p>
+       
+        <div id="footer">
+        </div>
+    
+</body>
+</html>
+<script>
+    var moveHammer = null;
+    var posX = 0;
+    var posY = 0;
+    var lastPosX = 0;
+    var  lastPosY = 0;
+    $(function () {
+
+      
+
+        DragImage();
+    });
+
+    function DragImage() {
+
+        var objImage = $("#Img1");
+
+        var ObjHammer = Hammer(objImage[0]);
+
+        moveHammer = ObjHammer.on("drag dragend", function (ev) {
+            ev.preventDefault();    //取消事件的默认动作（重要）
+            manageMultitouch(ev);
+        });
+
+        function manageMultitouch(ev) {
+            switch (ev.type) {
+                case 'drag':
+                    posX = ev.gesture.deltaX + lastPosX;
+                    posY = ev.gesture.deltaY + lastPosY;
+                    break;
+                case 'dragend':
+                    lastPosX = posX;
+                    lastPosY = posY;
+                    break;
+            }
+            transform =
+                "translate(" + posX + "px," + posY + "px)";
+            objImage[0].style.transform = transform;
+            objImage[0].style.oTransform = transform;
+            objImage[0].style.msTransform = transform;
+            objImage[0].style.mozTransform = transform;
+            objImage[0].style.webkitTransform = transform;
+        }
+    }
+</script>

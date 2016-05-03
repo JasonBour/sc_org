@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+<script type="text/javascript " src="./js/bootstrap.min.js"></script>
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">	
+<link rel="stylesheet" type="text/css" href="./css/image-check.css">
+	<title></title>
+</head>
+<body>
+
+<div class="dropdown">
+		<button class="btn dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		选择颜色
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			<li role="presentation">
+
+				<div id="image_check">
+					
+          <ul>
+		     <li class="c checked">
+			<input type="radio" id="radio_a_01" name="radio_a" />
+			<label for="radio_a_01"><img src="image/round.jpg"    class="check-item" alt="" disabled/></label>
+			
+			<i></i>
+		   </li>
+		   <li class="c">
+			<input type="radio" id="radio_a_02" name="radio_a" />
+			<label for="radio_a_02"><img src="image/round.jpg"  class="check-item" alt="" disabled/></label>
+			<i></i>
+		</li>
+		<li class="c">
+			<input type="radio" id="radio_a_03" name="radio_a" />
+			<label for="radio_a_03"><img src="image/round.jpg"  class="check-item" alt="" disabled/></label>
+			<i></i>
+		</li>
+		<li class="c">
+			<input type="radio" id="radio_a_04" name="radio_a" />
+			<label for="radio_a_04"><img src="image/round.jpg"  class="check-item" alt="" disabled/></label>
+			<i></i>
+		</li>
+	</ul>
+
+
+
+
+
+				</div>
+			</li>
+			
+			<li role="presentation" class="divider"></li>
+			<li role="presentation"><a href="#" role="menuitem" tabindex="-1">separated link</a></li>
+		</ul>
+	</div>
+	
+
+<script type="text/javascript">
+	
+(function() {
+    var radioWrap = document.getElementById("image_check"),
+        li = radioWrap.getElementsByTagName("li");
+  
+    for(var i = 0; i < li.length; i++){
+        li[i].onclick = function() {
+            for(var i = 0; i < li.length; i++){
+                li[i].className = "";
+            }
+            this.className = "checked";
+        }
+    }
+})();
+
+</script>
+</body>
+</html>

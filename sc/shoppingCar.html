@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="./css/card.css">
+
+
+	<meta charset="utf-8">
+	<title>购物车</title>
+</head>
+<body>
+
+<!--头部-->
+<div class="f_box f_editor_setting" id="f_editor_setting" style="display:block;">
+        <div class="f_header" id="f_header_setting">
+            <span class="f_header_text">购物车</span>
+             <span class="f_header_btn f_header_back" id="f_header_back">返回</span>  
+             
+        </div>
+
+
+
+
+<!--隐藏的添加收获地址-->
+<div class="address">
+           <ul  class="address_info">
+           	<li>
+                <span>收货人姓名：</span>
+                <input type="text" v-model="name" v-text="UserName"  lazy>
+            </li>
+            <li>
+                <span>手 机&nbsp;号 码：</span>
+                <input type="number" v-model="mobile" v-text="Phone" lazy>
+            </li>
+            <li>
+                <span>所  &nbsp; 在 &nbsp; 省：</span>
+                <select v-model="province" options="provinces" v-on="change: modpro" name="province" id="s1"></select>
+            </li>
+            <li>
+                <span>所 &nbsp; 在   &nbsp;市：</span>
+                <select v-model="city" options="cities" v-on="change: modcity" name="city" id="s2"></select>
+            </li>
+            <li>
+                <span>所 &nbsp; 在 &nbsp; 区：</span>
+                <select v-model="district" options="districts"  name="town" id="s3"></select>
+            </li>
+            <li>
+                <span>详细  &nbsp;地址：</span>
+                <input type="text" v-model="address" lazy>
+            </li>
+            <li class="choose">
+                
+                <input type="button" value="确认添加" class="confirm">
+                 <input type="button" value="取消添加" class="cancel">
+            </li>
+           </ul>
+             
+
+
+
+
+
+
+				<!---->
+</div>
+
+
+<!--用于显示的添加收货地址 与选择-->
+<div class="add_new_address set_address ">
+	    
+        
+            <span class="span_wrap"><a class="add-address" style="width:130px;"><span class="span-address"></span>添加收货地址</a>
+            </span>
+</div>
+
+<div class="set_address choose_address">选择收货信息 : 
+<select class="user_info" style="width:80px;overflow-x:hidden;"></select>
+<br>
+<div>
+    <span class="user_info_content"></span>
+</div>
+
+</div>
+
+
+<!--显示具体的订单信息-->
+
+<div class="order">
+    <!--缩略图以及价格 标题 等-->
+    <div></div>   
+    <!--装订 印刷 等-->
+    <div class="operate-list">
+        <p class="book-bind">
+         装订：
+        <span class="book-bind-span" class="book" binding="5">双环装订<img src="./image/yes.png" class="book-bind-img"></span>
+        </p>
+        <p class="book-print">
+             印刷：
+        <span color="四色" class="book-print-4"  class="book" print="4">四色印刷<img src="./image/yes.png" id="book-print-4"></span>
+          <span color="六色" class="book-print-6" class="book" print="6">六色印刷<img src="./image/yes.png" id="book-print-6"></span>
+            </p>
+         <p class="book-paper">
+         纸张：
+        <span  class="book-paper-span" paper="6">进口卡纸<img src="./image/yes.png" id="book-paper-span"></span>
+                                </p>
+
+    </div>
+    <!--数量-->
+    <div class="pannel-bar ">
+        <p>
+        <span class="reduce-count">
+            
+        </span>
+        <span class="work-count">
+            
+        </span>
+        <span class="add-count">
+            
+        </span>
+        </p>
+        <img src="./image/delete.png" class="delete-btn">
+
+    </div>
+
+</div>
+
+
+
+<!--优惠券-->
+<div class="coupons">
+<span class="coupons_click">点击使用优惠券</span>
+</div>
+
+<div id="coupons">
+                <input type="text" placeholder="请输入优惠券号" id="inputCode"/>
+                <a class="coupons-yes" v-on="click: CouponsYes">确认</a>
+                <a class="coupons-bag" v-on="click: CouponsBag">使用卡包</a>
+                <a class="coupons-no" v-on="click: CouponsNo">取消</a>
+            </div>
+
+
+
+
+
+
+<!--配送方式-->
+<div class="express">
+<span>配送方式：</span>
+<select>
+    <option>圆通快递</option>
+    <option>中通快递</option>
+</select>
+<span  class="express_price">12</span>  
+<span style="float:right">￥</span>
+
+</div>
+
+<!--留言备注-->
+<div class="message">
+<p>留言备注：</p>
+    <textarea >
+        
+    </textarea>
+</div>
+
+
+<!--总价格以及提交订单按钮-->
+
+<div class="go-pay">
+                <span>订单总价:<span>￥<strong ></strong></span></span>
+                <button  class="add_order">提交订单</button>
+            </div>
+
+
+
+
+
+            <div id="mask" ></div>
+
+            <div id="mask-rule" ></div>
+
+
+
+
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/geo.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/card.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="./css/signup.css"  rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+<script  type="text/javascript">
+	var xmlhttp ;
+	function createXmlHttpRquest(){
+   //for IE 
+   try{
+   	xmlhttp = new ActiveXObject("Msxm12.XMLHTTP");
+   }    
+   catch(e){
+   	try{xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+   }catch(oc){
+   	xmlhttp = null;
+
+   }
+   }
+     //for Mozilla and safari
+     if(!xmlhttp&& typeof XMLHttpRequest != "undefined" ){
+     	xmlhttp = new XMLHttpRequest();
+     }
+     return xmlhttp;
+ 
+	}
+
+
+	function startRequest(){
+
+		createXmlHttpRquest();
+		var url = "";   // the page we request  on the server 
+		xmlhttp.onreadystatechange=handleStateChange;
+		xmlhttp.open("POST" ,url ,true);
+	    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded;");
+        xmlhttp.send(getdata());   
+	}
+
+
+function getdata(){
+var name = doument.getElementById("inputName").value ;
+var password =document.getElementById("inputPassword").value;
+var data = "name="+name+"&password="+password ;
+return data; 
+
+
+}
+
+
+
+</script>
+</head>
+
+
+<body>
+
+<!--sign up -->
+<div class="container" >
+<form calss="form-signup" method="POST" target=""><!--target url-->
+<lable for="inputName" src="sr-only">Your Name</lable>
+<input type="text" id="inputName" class="form-control" placeholder="Your Name" autofocus=""> 
+<lable for="inputPassword" src="sr-only">Password</lable>
+<input type="password" id="inputPassword" class="form-control" placeholder="Password">    
+<div class="sign">
+<button class="btn btn-primary btn-default" type="button">submit</button>
+</div>
+ 
+
+</form>
+</div>
+
+
+</body>
+</html>

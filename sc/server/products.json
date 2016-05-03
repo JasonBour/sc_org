@@ -1,0 +1,13 @@
+{
+  "id":"",
+  "num":"",
+   "detail":"[
+   {""},
+   {},
+   {}
+   ]"
+}
+
+{"ret":1,"msg":"查到咯！",
+"lists":
+"[{\"Id\":550116,\"Name\":\"回来了\",\"UpdateTime\":\"2015/11/26 16:27:29\",\"ProductType\":1010,\"CoverImgUrl\":\"imagedata/874/74/266874/550116/preview/cover.jpg\",\"CanEdit\":1},{\"Id\":558225,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/24 20:09:24\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":558228,\"Name\":\"我的挂历\",\"UpdateTime\":\"2015/11/20 16:41:12\",\"ProductType\":1007,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":558233,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/20 16:38:49\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":558226,\"Name\":\"我的挂历\",\"UpdateTime\":\"2015/11/20 16:30:04\",\"ProductType\":1007,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":549873,\"Name\":\"横版台历549873\",\"UpdateTime\":\"2015/11/18 16:00:51\",\"ProductType\":1010,\"CoverImgUrl\":\"imagedata/874/74/266874/549873/preview/cover.jpg\",\"CanEdit\":1},{\"Id\":550052,\"Name\":\"我的竖版台历\",\"UpdateTime\":\"2015/11/18 15:42:08\",\"ProductType\":1006,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":549881,\"Name\":\"横版台历549881\",\"UpdateTime\":\"2015/11/14 15:56:36\",\"ProductType\":1010,\"CoverImgUrl\":\"imagedata/874/74/266874/549881/preview/cover.jpg\",\"CanEdit\":1},{\"Id\":549870,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/8 14:39:41\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":550066,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/7 11:49:33\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":550051,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/6 14:02:44\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":550050,\"Name\":\"我的竖版台历\",\"UpdateTime\":\"2015/11/6 14:01:58\",\"ProductType\":1006,\"CoverImgUrl\":\"\",\"CanEdit\":1},{\"Id\":550023,\"Name\":\"我的横版台历\",\"UpdateTime\":\"2015/11/6 13:34:51\",\"ProductType\":1010,\"CoverImgUrl\":\"\",\"CanEdit\":1}]"}

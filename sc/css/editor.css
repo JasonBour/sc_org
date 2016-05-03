@@ -1,0 +1,1909 @@
+/**
+ * 
+ * @authors fyz
+ * @date    2015-09-03 11:56:04
+ * @version 移动台历编辑器css
+ */
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 12px;
+  background-color: #f3f3f1;
+}
+.f_upload_progress {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 10px;
+  z-index: 11;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 10px;
+  text-align: center;
+  display: block;
+}
+.f_upload_progress > span {
+  width: 1%;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  background-color: #C33B3B;
+  display: block;
+}
+.f_box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #f3f3f1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.f_box .f_header {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  border-bottom: 1px solid #d7d7d1;
+  background-color: #ffffff;
+}
+.f_box .f_header .f_header_text {
+  color: #555555;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+.f_box .f_header .f_editor_head {
+  margin: auto;
+  width: 20%;
+}
+.f_box .f_header .f_header_btn {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #d3740e;
+  background-color: #ffffff;
+  color: #d3740e;
+  border-radius: 3px;
+}
+.f_box .f_header .f_header_back,
+.f_box .f_header .f_header_setting {
+  left: 10px;
+}
+.f_box .f_header .f_header_setting .f_header_setting_icon,
+.f_box .f_header .f_works_order .f_header_setting_icon {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 22px;
+  width: 22px;
+  height: 3px;
+  background-color: #d3740e;
+  display: block;
+}
+.f_box .f_header .f_header_setting .f_header_setting_icon:after,
+.f_box .f_header .f_works_order .f_header_setting_icon:after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: -1px;
+  width: 5px;
+  height: 5px;
+  background-color: #d3740e;
+  border-radius: 50%;
+}
+.f_box .f_header .f_header_next,
+.f_box .f_header .f_header_print,
+.f_box .f_header .f_header_save {
+  right: 10px;
+}
+.f_box .f_header .f_works_order {
+  right: 10px;
+}
+.f_box .f_header .f_header_save .f_save_text {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  display: block;
+}
+.f_box .f_header .f_header_save .f_save_bg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 30px;
+  background-color: #d3740e;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+  display: block;
+  z-index: 10;
+}
+.f_box .f_header .f_header_save .f_save_waitting {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #d3740e;
+  display: none;
+}
+.f_box .f_header .f_header_save .f_save_waitting .f_rects {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 8px;
+  height: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  webkit-animation: myloading 1.2s infinite ease-in-out;
+  animation: myloading 1.2s infinite ease-in-out;
+  display: block;
+}
+.f_box .f_header .f_header_save .f_save_waitting .f_rect1 {
+  left: -25px;
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.f_box .f_header .f_header_save .f_save_waitting .f_rect2 {
+  left: 0px;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.f_box .f_header .f_header_save .f_save_waitting .f_rect3 {
+  left: 25px;
+  -webkit-animation-delay: -1.3s;
+  animation-delay: -1.3s;
+}
+/*
+	创建作品跟设置页面
+*/
+.f_editor_setting {
+  z-index: 101;
+}
+.f_editor_setting .f_setting_tools {
+  padding: 20px 0px;
+  margin: 5px auto 0px;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #d7d7d1;
+  border-bottom: 1px solid #d7d7d1;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs {
+  margin: auto;
+  width: 91%;
+  font-size: 14px;
+  color: #555555;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_times {
+  width: 100%;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_times_hol {
+  margin-top: 20px;
+  width: 100%;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box {
+  position: relative;
+  width: 43%;
+  height: 50px;
+  border: 1px solid #c4c4be;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_select_text,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_select_text {
+  width: 60%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_select_icon,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_select_icon {
+  width: 35%;
+  height: 50px;
+  line-height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_select_icon > span,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_select_icon > span {
+  position: relative;
+  border: 10px solid transparent;
+  border-top: 10px solid #b1b1b1;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_select_icon > span:before,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_select_icon > span:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #ffffff;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_time_select_options,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_time_select_options {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #cccccc;
+  z-index: 100;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_time_select_options .f_select_option,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_time_select_options .f_select_option {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #d7d7d1;
+  display: block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box .f_time_select_options .f_select_last,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box .f_time_select_options .f_select_last {
+  border: none;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_y,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_y,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_hol,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_hol {
+  float: left;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_m,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_m {
+  float: right;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box_line,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box_line {
+  width: 8%;
+  height: 50px;
+  text-align: center;
+  line-height: 48px;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects .f_time_select_box_line > span,
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_times_selects_hol .f_time_select_box_line > span {
+  width: 100%;
+  border-top: 1px solid #b1b1b1;
+  display: inline-block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_lines {
+  margin-top: 20px;
+  width: 100%;
+  height: 1px ;
+  border-top: 1px solid #d7d7d1;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_style {
+  margin: 20px auto 0px;
+  width: 100%;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal {
+  margin: 20px auto 0px;
+  width: 100%;
+  overflow: hidden;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_setting_style_g {
+  position: relative;
+  width: 43%;
+  border: 1px solid #c4c4be;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: block;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_setting_style_g > img {
+  border-radius: 3px;
+  width: 100%;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_setting_style_g > span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20%;
+  display: none;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_setting_style_g > span > img {
+  width: 100%;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_style_g {
+  float: left;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .f_style_a {
+  float: right;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .cur {
+  border-color: #ff3218;
+}
+.f_editor_setting .f_setting_tools .f_setting_boxs .f_setting_cal .cur > span {
+  display: block;
+}
+/*编辑*/
+.f_box_editor_main {
+  /*底部导航*/
+  /*月份导航*/
+  /*罩罩们*/
+  /*编辑图片*/
+}
+.f_box_editor_main .f_header .f_header_text .f_header_icon {
+  position: relative;
+  margin-left: 3px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_box_editor_main .f_header .f_header_text .f_header_icon:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 2px;
+  height: 12px;
+  border-radius: 5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #d3740e;
+}
+.f_box_editor_main .f_header .f_header_text .f_header_icon:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 2px;
+  height: 12px;
+  border-radius: 5px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #d3740e;
+}
+.f_box_editor_main .f_editor {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+.f_box_editor_main .f_editor .f_editor_page_change {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 32px;
+  height: 70px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  background-color: #f9f9f8;
+  line-height: 90px;
+  text-align: center;
+}
+.f_box_editor_main .f_editor .f_editor_change_pre {
+  left: 10px;
+}
+.f_box_editor_main .f_editor .f_editor_change_pre > span {
+  position: relative;
+  left: -7px;
+  border: 10px solid transparent;
+  border-right: 10px solid #b1b1b1;
+  display: inline-block;
+}
+.f_box_editor_main .f_editor .f_editor_change_pre > span:before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: 10px solid transparent;
+  border-right: 10px solid #f9f9f8;
+}
+.f_box_editor_main .f_editor .f_editor_change_next {
+  right: 10px;
+}
+.f_box_editor_main .f_editor .f_editor_change_next > span {
+  position: relative;
+  right: -7px;
+  border: 10px solid transparent;
+  border-left: 10px solid #b1b1b1;
+  display: inline-block;
+}
+.f_box_editor_main .f_editor .f_editor_change_next > span:before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  border: 10px solid transparent;
+  border-left: 10px solid #f9f9f8;
+}
+.f_box_editor_main .f_editor .f_cal_bg {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+.f_box_editor_main .f_editor .f_cal_bg > img {
+  height: 100%;
+}
+.f_box_editor_main .f_editor .f_cal_bg_1006 {
+  height: 431.3989726027397px;
+}
+.f_box_editor_main .f_editor .f_cal_editor {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  /*border:1px solid  #aaaaaa;*/
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_editor_main {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_editor_head_1006 {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -1.55%;
+  height: 5%;
+  z-index: 100;
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_editor_head_1006 > img {
+  width: 100%;
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_editor_head_1010 {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -2.55%;
+  height: 5%;
+  z-index: 100;
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_editor_head_1010 > img {
+  width: 100%;
+}
+.f_box_editor_main .f_editor .f_cal_editor .f_head {
+  display: none;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1006 .f_editor_head_1006 {
+  display: block;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1010 {
+  border: none;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1010 .f_editor_head_1010 {
+  display: block;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1006:before {
+  content: '';
+  position: absolute;
+  left: 100%;
+  right: -10.3%;
+  top: 0px;
+  bottom: -7%;
+  background-image: url('/static/img/appcalendareditor/cal_1006bg_03.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1006:after {
+  content: '';
+  position: absolute;
+  left: -0.3%;
+  right: -0.38%;
+  top: 99.5%;
+  bottom: -8%;
+  background-image: url('/static/img/appcalendareditor/cal_1006bg_05.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1010:before {
+  content: '';
+  position: absolute;
+  left: 100%;
+  right: -5.3%;
+  top: 0px;
+  bottom: -7%;
+  background-image: url('/static/img/appcalendareditor/cal_1010bg_03.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_cal_editor_1010:after {
+  content: '';
+  position: absolute;
+  left: -0.3%;
+  right: -0.38%;
+  top: 99.5%;
+  bottom: -9.5%;
+  background-image: url('/static/img/appcalendareditor/cal_1010bg_06.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_cal_editor_back {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_cal_editor_back .f_editor_main_back {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px #cccccc;
+}
+.f_box_editor_main .f_editor .f_cal_editor_back:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -8%;
+  bottom: 95%;
+  background-image: url('/static/img/appcalendareditor/calendary_bg_line.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 100;
+}
+.f_box_editor_main .f_editor .f_cal_editor_back:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  bottom: -12%;
+  background-image: url('/static/img/appcalendareditor/cal_1007bg_03.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_1007_cover:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -2%;
+  bottom: 96%;
+  background-image: url('/static/img/appcalendareditor/calendary_bg_line_cover.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 99;
+}
+.f_box_editor_main .f_editor .f_1007_cover:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  bottom: -12%;
+  background-image: url('/static/img/appcalendareditor/cal_1007bg_03.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.f_box_editor_main .f_editor .f_b_box {
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  border: 0 solid white;
+}
+.f_box_editor_main .f_editor .f_imgbox > img {
+  position: absolute;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_imgbox_btn {
+  display: none;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_onloading_img {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #cccccc;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_onloading_img > span {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 8px;
+  height: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  webkit-animation: myloading 1.2s infinite ease-in-out;
+  animation: myloading 1.2s infinite ease-in-out;
+  display: block;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_onloading_img > .f_rect1 {
+  left: -25px;
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_onloading_img > .f_rect2 {
+  left: 0px;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.f_box_editor_main .f_editor .f_imgbox .f_onloading_img > .f_rect3 {
+  left: 25px;
+  -webkit-animation-delay: -1.3s;
+  animation-delay: -1.3s;
+}
+.f_box_editor_main .f_editor .f_round {
+  border-radius: 10px;
+}
+.f_box_editor_main .f_editor .f_round > img {
+  border-radius: 10px;
+}
+.f_box_editor_main .f_editor .f_not_img {
+  background-color: #cccccc;
+}
+.f_box_editor_main .f_editor .f_not_img .f_imgbox_btn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: block;
+  z-index: 99;
+}
+.f_box_editor_main .f_editor .f_not_img:before {
+  content: '+';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+.f_box_editor_main .f_editor .f_not_img:after {
+  content: '点击上传图片';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding-top: 22px;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.f_box_editor_main .f_editor .f_txtbox {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  line-height: 1em;
+}
+.f_box_editor_main .f_editor .f_txtbox .f_content {
+  width: 100%;
+  display: block;
+}
+.f_box_editor_main .f_editor .f_txt_box_bg {
+  border: 1px dotted #222222;
+}
+.f_box_editor_main .f_editor_bars {
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #d5d5d5;
+  background-color: #fbfbfa;
+}
+.f_box_editor_main .f_editor_bars > ul {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_editor_bar {
+  margin-top: 7px;
+  margin-left: 7px;
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 35px;
+  background-color: #fbfbfa;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_editor_bar > span {
+  width: 20px;
+  height: 20px;
+  background-image: url('/static/img/appcalendareditor/bars.png');
+  background-repeat: no-repeat;
+  background-size: 105px;
+  background-position: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_bar_compos {
+  margin-left: 5%;
+}
+.f_box_editor_main .f_editor_bars > ul .f_bar_compos .f_compos {
+  margin: 7px auto 0px;
+  background-position: -5px -25px;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_bar_shapes .f_shapes {
+  margin: 5px auto 0px;
+  background-position: -27px -24px;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_bar_align .f_align {
+  margin: 6px auto 0px;
+  background-position: -53px -24px;
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars > ul .f_bar_color .f_color {
+  margin: 4px auto 0px;
+  background-position: -77px 1px;
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars > ul .cur {
+  background-color: #eb942e;
+}
+.f_box_editor_main .f_editor_bars > ul .cur .f_compos {
+  background-position: -5px 0px;
+}
+.f_box_editor_main .f_editor_bars > ul .cur .f_shapes {
+  background-position: -27px 1px;
+  width: 25px;
+  height: 25px;
+}
+.f_box_editor_main .f_editor_bars > ul .cur .f_align {
+  background-position: -53px 1px;
+  width: 22px;
+  height: 22px;
+}
+.f_box_editor_main .f_editor_bars > ul .cur .f_color {
+  background-position: -77px 1px;
+  width: 26px;
+  height: 26px;
+}
+.f_box_editor_main .f_editor_bars_content {
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #fbfbfa;
+}
+.f_box_editor_main .f_editor_bars_content > ul {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div {
+  width: 1000%;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_bars_option {
+  float: left;
+  margin: 4px 1px 1px 10px;
+  width: 60px;
+  height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url('/static/img/appcalendareditor/compos1.png');
+  background-repeat: no-repeat;
+  background-size: 715px;
+  border: 1px solid #bababa;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1006,
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007 {
+  background-image: url('/static/img/appcalendareditor/compos2.png');
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_one {
+  margin-left: 10px;
+  background-position: -8px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_two {
+  background-position: -79px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_three {
+  background-position: -150px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_four {
+  background-position: -221px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_five {
+  background-position: -291px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_six {
+  background-image: url('/static/img/appcalendareditor/right_right.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007one {
+  background-position: -150px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007three {
+  margin-left: 10px;
+  background-position: -578px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007five {
+  background-position: -362px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007six {
+  background-position: -433px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007sev {
+  background-position: -291px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_compos_1007ei {
+  background-position: -504px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_shape_one {
+  margin-left: 10px;
+  background-position: -367px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_shape_two {
+  background-position: -436px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_shape_three {
+  background-position: -504px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_align_one {
+  margin-left: 10px;
+  background-position: -578px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_align_two {
+  background-position: -646px -2px;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option {
+  float: left;
+  margin: 4px 1px 1px 10px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border: 1px solid #bababa;
+  background-color: #ffffff;
+  text-align: center;
+  display: inline-block;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option > span {
+  margin: 2px auto 0px;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  display: block;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_one > span {
+  background-color: #fd3921;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_two > span {
+  background-color: #92bc00;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_three > span {
+  background-color: #000000;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_four > span {
+  background-color: #ffa64c;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_five > span {
+  background-color: #00b7ee;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_six > span {
+  background-color: #0168b7;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_sev > span {
+  background-color: #00B7EE;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_eig {
+  display: none;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .f_color_option_eig > span {
+  background-color: #f07395;
+}
+.f_box_editor_main .f_editor_bars_content > ul .f_bar > div .cur {
+  margin: 3px 0px 0px 9px;
+  border: 2px solid #fe7517;
+}
+.f_box_editor_main .f_editor_title {
+  margin: 10px auto 0px;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #d5d5d5;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.f_box_editor_main .f_editor_title > span {
+  float: left;
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #555555;
+  box-sizing: border-box;
+  border-right: 1px solid #d5d5d5;
+  display: block;
+}
+.f_box_editor_main .f_editor_title .f_p {
+  border: none;
+}
+.f_box_editor_main .f_editor_title .cur {
+  color: #752c1b;
+}
+.f_box_editor_main .f_leader_months {
+  padding: 35px 0px 35px 10px;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0px;
+  margin: auto;
+  width: 295px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #cccccc;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  display: none;
+  z-index: 100;
+}
+.f_box_editor_main .f_leader_months > span {
+  margin-top: 5px;
+  margin-left: 3px;
+  position: relative;
+  width: 85px;
+  height: 35px;
+  line-height: 35px;
+  color: #8f655b;
+  overflow: hidden;
+  display: inline-block;
+}
+.f_box_editor_main .f_leader_months > span .f_leader_bg_left {
+  float: left;
+  width: 50%;
+  height: 35px;
+  border: 1px solid #dadad4;
+  background-color: #f4f4f2;
+  border-right: none;
+  box-sizing: border-box;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.f_box_editor_main .f_leader_months > span .f_leader_bg_right {
+  float: left;
+  width: 50%;
+  height: 35px;
+  border: 1px solid #dadad4;
+  background-color: #f4f4f2;
+  border-left: none;
+  box-sizing: border-box;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.f_box_editor_main .f_leader_months > span .f_leader_bg_txt {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.f_box_editor_main .f_leader_months .cur .f_leader_bg_left,
+.f_box_editor_main .f_leader_months .cur .f_leader_bg_right {
+  border-color: #d3740e;
+  background-color: #d3740e;
+}
+.f_box_editor_main .f_leader_months .cur .f_leader_bg_txt {
+  color: #ffffff;
+}
+.f_box_editor_main .f_alert {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+}
+.f_box_editor_main .f_alert .f_alert_mark {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.f_box_editor_main .f_alert .f_alert_panel {
+  padding: 30px 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  width: 93%;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_panel_close_btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_panel_close_btn:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 2px;
+  height: 30px;
+  background-color: #b8b8b8;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_panel_close_btn:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 2px;
+  height: 30px;
+  background-color: #b8b8b8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_title_txt {
+  margin: 10px auto 0px;
+  width: 100%;
+  text-align: center;
+  color: #222222;
+  font-size: 16px;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_setting_input {
+  margin: 20px auto 0px;
+  width: 90%;
+  height: 50px;
+  border: 1px solid #c3c5bd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_setting_input > input {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  display: block;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_setting_title_sure {
+  margin: 30px auto 0px;
+  width: 90%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #752d1a;
+  font-size: 16px;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_imgs_tips_months {
+  margin: 20px auto 0px;
+  width: 285px;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_imgs_tips_months > span {
+  margin-top: 5px;
+  margin-left: 3px;
+  position: relative;
+  width: 85px;
+  height: 35px;
+  line-height: 35px;
+  color: #8f655b;
+  overflow: hidden;
+  display: inline-block;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_imgs_tips_months > span .f_leader_bg_left {
+  float: left;
+  width: 50%;
+  height: 35px;
+  border: 1px solid #dadad4;
+  background-color: #f4f4f2;
+  border-right: none;
+  box-sizing: border-box;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_imgs_tips_months > span .f_leader_bg_right {
+  float: left;
+  width: 50%;
+  height: 35px;
+  border: 1px solid #dadad4;
+  background-color: #f4f4f2;
+  border-left: none;
+  box-sizing: border-box;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_imgs_tips_months > span .f_leader_bg_txt {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_line {
+  margin: 30px auto 30px;
+  width: 90%;
+  border-top: 1px solid #d6d8d0;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_tips_btns {
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_tips_btns .f_tips_btns {
+  width: 45%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 3px;
+  display: block;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_tips_btns .f_tips_back {
+  float: left;
+  background-color: #ba9286;
+}
+.f_box_editor_main .f_alert .f_alert_panel .f_alert_tips_btns .f_tips_go {
+  float: right;
+  background-color: #752d1a;
+}
+.f_box_editor_main .f_alert .f_setting_titles_panel {
+  bottom: 0px;
+  height: 310px;
+}
+.f_box_editor_main .f_img_control {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 100;
+  display: none;
+}
+.f_box_editor_main .f_img_control .f_img_control_mask {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.f_box_editor_main .f_img_control .f_img_control_main {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_header {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 52px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3dac4;
+  overflow: hidden;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_header .f_img_control_header_text {
+  margin: auto;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_header .f_img_control_header_btns {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #d3740e;
+  background-color: #ffffff;
+  color: #d3740e;
+  border-radius: 3px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_header .f_img_control_header_clean {
+  left: 10px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_header .f_img_control_header_sure {
+  right: 10px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_mask {
+  position: absolute;
+  top: 53px;
+  bottom: 84px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 10;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_mask .f_img_mask_box {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_mask .f_img_mask_box > img {
+  position: absolute;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_move {
+  position: absolute;
+  left: 0px;
+  bottom: 52px;
+  width: 100%;
+  height: 32px;
+  background-color: #262626;
+  z-index: 11;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_move .f_img_control_footer_move_bg {
+  position: relative;
+  margin: 13px auto 0px;
+  width: 85%;
+  height: 6px;
+  background-color: #4a4a4a;
+  border-radius: 5px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_move .f_img_control_footer_move_bg .f_img_control_footer_move_wihte_bg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_move .f_img_control_footer_move_bg .f_img_control_footer_btn {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  background-image: url('/static/img/appcalendareditor/img_control.png');
+  background-repeat: no-repeat;
+  background-position: -217px 1px;
+  background-size: 258px;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 52px;
+  background-color: #202020;
+  z-index: 11;
+  overflow: hidden;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span {
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_footer_bar {
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 32px;
+  height: 32px;
+  background-image: url('/static/img/appcalendareditor/img_control.png');
+  background-repeat: no-repeat;
+  background-size: 258px;
+  display: inline-block;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_auto {
+  background-position: 0 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_fill {
+  background-position: -37px 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_left_rotate {
+  background-position: -74px 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_right_rotate {
+  background-position: -111px 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_delete {
+  background-position: -148px 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_upload {
+  position: relative;
+  background-position: -182px 0;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_upload .f_upload_img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: block;
+}
+.f_box_editor_main .f_img_control .f_img_control_main .f_img_control_footer_bars > span .f_img_control_bar_upload #f_img_control_upload_bar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 11;
+}
+/*
+	设置的选项，选项-我的作品
+*/
+.f_all_settings,
+.f_works_settings {
+  position: absolute;
+  top: 52px;
+  left: 18px;
+  width: 115px;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 8px #cccccc;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #787878;
+  z-index: 101;
+}
+.f_all_settings:before,
+.f_works_settings:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #cccccc;
+}
+.f_all_settings:after,
+.f_works_settings:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -19px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+}
+.f_all_settings .f_all_settings_li,
+.f_works_settings .f_all_settings_li {
+  border-bottom: 1px solid #f4f4f4;
+}
+.f_all_settings .f_all_settings_li > span,
+.f_works_settings .f_all_settings_li > span {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+}
+/*我的印品列表*/
+.f_works_settings {
+  left: initial;
+  right: 18px;
+}
+.f_works_settings:before {
+  left: initial;
+  right: 10px;
+}
+.f_works_settings:after {
+  left: initial;
+  right: 10px;
+}
+.f_myworks {
+  z-index: 101;
+}
+.f_all_myworks {
+  padding: 20px 0px;
+  padding-top: 0px;
+  margin: 5px auto 0px;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #d7d7d1;
+  border-bottom: 1px solid #d7d7d1;
+}
+.f_all_myworks > ul {
+  margin: auto;
+  width: 100%;
+}
+.f_all_myworks > ul .f_works_li {
+  position: relative;
+  padding: 10px;
+  margin: 0 auto 0;
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img {
+  margin-right: 10px;
+  min-width: 77px;
+  height: 80px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img > img {
+  margin: auto;
+  height: 100%;
+  display: block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img .hadImg {
+  box-shadow: 0px 0px 3px #555555;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img_1010 {
+  height: 60px;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img_1007 {
+  height: 84px;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_img_1006 {
+  height: 84px;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos {
+  width: 50%;
+  max-width: 50%;
+  vertical-align: middle;
+  display: inline-block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span {
+  display: inline-block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span .f_has_works_infos_title {
+  position: relative;
+  left: 14px;
+  text-align: left;
+  color: #d3740e;
+  font-size: 16px;
+  display: inline-block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span .f_has_works_infos_title:before {
+  content: '《';
+  position: absolute;
+  top: 0px;
+  left: -18px;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span .f_has_works_infos_title:after {
+  content: '》';
+  position: absolute;
+  top: 0px;
+  right: -18px;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span .f_has_works_infos_size,
+.f_all_myworks > ul .f_works_li .f_has_works_infos > span .f_has_works_infos_time {
+  font-size: 16px;
+  color: #555555;
+  text-align: left;
+  display: block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_edit {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 18%;
+  height: 80px;
+  border-left: 1px dotted #c1c1c1;
+  background-color: #ffffff;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_edit > span {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 40px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  display: block;
+}
+.f_all_myworks > ul .f_works_li .f_has_works_edit > span .f_has_works_point {
+  margin: 0px 1px 0px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #D47712;
+  display: inline-block;
+}
+.f_all_myworks .f_edit_bar {
+  position: absolute;
+  left: 161px;
+  top: 31px;
+  width: 120px;
+  height: 80px;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0px 0px 10px #cccccc;
+}
+.f_all_myworks .f_edit_bar:before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #cccccc;
+  opacity: 0.5;
+}
+.f_all_myworks .f_edit_bar:after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: -19px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  display: block;
+}
+.f_all_myworks .f_edit_bar > span {
+  position: relative;
+  text-align: center;
+}
+.f_all_myworks .f_edit_bar > span > span {
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+}
+.f_all_myworks .f_edit_bar .f_edit_bar_edit {
+  margin: auto;
+  width: 100%;
+  height: 39px;
+  line-height: 39px;
+  display: block;
+  border-bottom: 1px solid #dddfe2;
+}
+.f_all_myworks .f_edit_bar .f_edit_bar_edit > span {
+  background-image: url('/static/img/appcalendareditor/pen.png');
+}
+.f_all_myworks .f_edit_bar .f_edit_bar_delete {
+  margin: auto;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+}
+.f_all_myworks .f_edit_bar .f_edit_bar_delete > span {
+  background-image: url('/static/img/appcalendareditor/delete.png');
+}
+/*我的图片列表*/
+.f_my_imgs {
+  z-index: 101;
+  background-color: initial;
+  display: block;
+}
+.f_my_imgs .f_box_marks {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.f_my_imgs .f_my_imgs_box {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 58%;
+  height: 100%;
+  min-width: 200px;
+  background-color: #ffffff;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_hide {
+  position: absolute;
+  left: -23px;
+  top: 0px;
+  bottom: 0px;
+  height: 75px;
+  line-height: 75px;
+  width: 23px;
+  margin: auto;
+  background-color: #ffffff;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_hide > span {
+  position: absolute;
+  left: 8px;
+  top: 27px;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_hide > span:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_hide > span:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0px;
+  border: 10px solid transparent;
+  border-left: 10px solid #ffffff;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_header {
+  margin: auto;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_header .f_img_header_btn {
+  margin-top: 5px;
+  width: 45%;
+  height: 26px;
+  background-color: #8c4448;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 5px;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_header .f_imgx_box_uploadbtn {
+  /*margin-left: 2%;
+   			float: left;*/
+  margin: 5px auto 0px;
+  width: 80%;
+  display: block;
+}
+.f_my_imgs .f_my_imgs_box .f_my_imgs_header .f_imgx_box_sure {
+  margin-right: 2%;
+  float: right;
+}
+.f_my_imgs .f_my_imgs_box .f_imgs_box {
+  position: absolute;
+  right: 0px;
+  top: 41px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.f_my_imgs .f_my_imgs_box .f_imgs_box .f_img {
+  float: left;
+  margin-top: 7px;
+  margin-left: 7px;
+  width: 90px;
+  height: 90px;
+  background-color: #0f0f0f;
+}
+#waiting_load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  text-align: center;
+}
+#waiting_load .waiting_load_mask {
+  background-color: #000000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+#waiting_load > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+}
+#waiting_load .waiting_load_rects {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 134px;
+  height: 200px;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+}
+#waiting_load .waiting_load_rects .load_rect {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  background-color: #cccccc;
+  width: 10px;
+  height: 80px;
+  -webkit-animation: myloading 1.2s infinite ease-in-out;
+  animation: myloading 1.2s infinite ease-in-out;
+}
+#waiting_load .waiting_load_rects .load_rect1 {
+  left: 10px;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+#waiting_load .waiting_load_rects .load_rect2 {
+  left: 27px;
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+#waiting_load .waiting_load_rects .load_rect3 {
+  left: 45px;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+#waiting_load .waiting_load_rects .load_rect4 {
+  left: 64px;
+  -webkit-animation-delay: -1.3s;
+  animation-delay: -1.3s;
+}
+#waiting_load .waiting_load_rects .load_rect5 {
+  left: 84px;
+  -webkit-animation-delay: -1.4s;
+  animation-delay: -1.4s;
+}
+#waiting_load .waiting_load_rects .load_rect6 {
+  left: 102px;
+  -webkit-animation-delay: -1.5s;
+  animation-delay: -1.5s;
+}
+#waiting_load .waiting_load_rects .load_rect7 {
+  left: 119px;
+  -webkit-animation-delay: -1.6s;
+  animation-delay: -1.6s;
+}
+#waiting_load .waiting_load_text {
+  position: absolute;
+  top: 53%;
+  left: 42%;
+  text-align: center;
+  width: 190px;
+  color: #ffffff;
+  font-weight: bold;
+}
+@-webkit-keyframes myloading {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes myloading {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
